@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083b03dcdf019d34d86b7bcd7087b413, type: 3}
+  m_Name: Stone
+  m_EditorClassIdentifier: 
+  type: 3
+  category: 0
+  itemName: Pedra
+  image: {fileID: -1695584528, guid: ab2f8c46703353243b8273edc8afea36, type: 3}
+  description: Lasca de pedra
+  shortDescription: "Cria\xE7\xE3o de items"
+  lootPrefab: {fileID: 17439695949940244, guid: 530dda0b5c465fc4486833493982c8ff, type: 3}
+  hitAmount: 3
+  lootAmount: 2
