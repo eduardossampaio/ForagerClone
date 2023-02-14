@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using SimpleEventSystem;
 public class SlotItem : MonoBehaviour
 {
     public Image itemImage;
@@ -14,13 +15,16 @@ public class SlotItem : MonoBehaviour
     private Item item;
     private bool isDeletingItem;
 
+    public GameConfigurations configurations;
+
     private float deltaTime;
+    [SerializeField] private NotificationAgent notificationAgent;
 
     private void Update()
     {
         if (isDeletingItem)
         {
-            float timeToDelete = CoreGame.instance.gameManager.timeToDeleteItem;
+            float timeToDelete = configurations.timeToDeleteItemInInventory;
             deltaTime += Time.deltaTime;
             var percentual = deltaTime / timeToDelete;
             deleteBar.fillAmount = percentual;
@@ -86,14 +90,14 @@ public class SlotItem : MonoBehaviour
 
     private void DeleteItem()
     {
-        CoreGame.instance.DeleteItem(item);
+        notificationAgent.NotifyEvent(ItemEvents.DELETE_ITEM, item);
     }
 
     private void UseItem()
     {
         if (item.category == ItemCategory.CONSUMABLE)
         {
-            CoreGame.instance.UseItem(item);
+            notificationAgent.NotifyEvent(ItemEvents.USE_ITEM, item);
         }
     }
 }

@@ -24,10 +24,6 @@ public class CoreGame : MonoBehaviour
         instance = this;
     }
 
-    public Inventory GetInventory()
-    {
-        return player.GetInventory();
-    }
 
     public void ShowInventory(Inventory inventory)
     {
@@ -39,17 +35,5 @@ public class CoreGame : MonoBehaviour
         }
     }
 
-    public void DeleteItem(Item item)
-    {
-        player.GetInventory().DeleteItem(item);
-        inventoryPanel.UpdateInventory(player.GetInventory());
-    }
-
-    public void UseItem(Item item)
-    {
-        player.GetInventory().UseItem(item);
-        player.UseItem(item);
-        inventoryPanel.UpdateInventory(player.GetInventory());
-    }
 
 }

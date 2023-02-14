@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleEventSystem;
 
 public class Player : MonoBehaviour
 {
+    public class PlayerEvents
+    {
+        public static string PLAYER_MOVED = "PlayerEvents.PLAYER_MOVED";
+        public static string PLAYER_HIT = "PlayerEvents.PLAYER_HIT";
+    }
     public float movementSpeed = 1;
     public float currentEnergy = 5;
     public float maxEnergy = 15;
@@ -21,12 +27,16 @@ public class Player : MonoBehaviour
  
     private bool isAction = false;
 
+    private NotificationAgent notificationAgent;
+
     private bool isActionButtonPressed;
     void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         inventory = GetComponent<Inventory>();
+
+        RegisterNotifications();
     }
 
     // Update is called once per frame
@@ -73,10 +83,19 @@ public class Player : MonoBehaviour
         rigidBody2D.velocity = movementInput * movementSpeed;
 
         animator.SetBool("walking", walking);
-
+        if (walking)
+        {
+            notificationAgent.NotifyEvent(PlayerEvents.PLAYER_MOVED, this);
+        }
 
     }
 
+    private void RegisterNotifications()
+    {
+        notificationAgent = GetComponent<NotificationAgent>();
+        notificationAgent.RegisterEvent<Item>(ItemEvents.USE_ITEM, UseItem);
+        notificationAgent.RegisterEvent<Item>(ItemEvents.DELETE_ITEM, DeleteItem);
+    }
     private void Flip()
     {
         if (isAction)
@@ -89,8 +108,9 @@ public class Player : MonoBehaviour
     }
     public void AxeHit()
     {
-        CoreGame.instance.gameManager.PerformHit();
+        //CoreGame.instance.gameManager.PerformHit();
         print("HIT");
+        notificationAgent.NotifyEvent(PlayerEvents.PLAYER_HIT,this);
     }
     private void ActionDone()
     {
@@ -127,11 +147,18 @@ public class Player : MonoBehaviour
 
     public void UseItem(Item item)
     {
+        print("using item");
+        inventory.UseItem(item);
         switch (item.type)
         {
             case ItemType.FOOD:
                 AddEnergy(item.energyAmount);
                 break;
         }
+    }
+
+    public void DeleteItem(Item item)
+    {
+        inventory.DeleteItem(item);
     }
 }

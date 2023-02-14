@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class ItemEvents
+{
+    public static string USE_ITEM = "ItemEvents.USE_ITEM";
+    public static string DELETE_ITEM = "ItemEvents.DELTE_ITEM";
+}
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptable/item", order = 1)]
 public class Item : ScriptableObject
 {
