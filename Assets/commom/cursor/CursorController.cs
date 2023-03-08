@@ -52,8 +52,8 @@ public class CursorController : MonoBehaviour
             return;
         }
 
-        distanceToObject = Vector2.Distance(CoreGame.instance.player.transform.position, interactingObject.transform.position);
-
+        //distanceToObject = Vector2.Distance(CoreGame.instance.player.transform.position, interactingObject.transform.position);
+        distanceToObject = CoreGame.instance.DistanceToPlayer(interactingObject);
         if (distanceToObject <= interactionDistance)
         {
             ActiveCursor(interactingObject);

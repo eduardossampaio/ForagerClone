@@ -120,10 +120,10 @@ TextureImporter:
       name: Recursos_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 3
+        y: 34
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8761aa0ade9ee4d4282d08de892ec205
+      spriteID: 7086315eaf609e0469eac79cb7fde452
       internalID: -1020807473
       vertices: []
       indices: 
@@ -141,10 +141,10 @@ TextureImporter:
       name: Recursos_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
+        x: 19
+        y: 34
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,7 +152,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 269ef4a40d95060449876560d5931142
+      spriteID: f5984f33240de97448b83620b465bb43
       internalID: 1841309027
       vertices: []
       indices: 
@@ -162,10 +162,10 @@ TextureImporter:
       name: Recursos_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
+        x: 36
+        y: 34
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,7 +173,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b8bd614956f2d44789374688a0508db
+      spriteID: 329678f0109e3a14cb457def89d339fb
       internalID: 888357826
       vertices: []
       indices: 
@@ -183,10 +183,10 @@ TextureImporter:
       name: Recursos_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
+        x: 2
+        y: 18
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +194,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bb1dc83508fdc34790fd548fe5b9f65
+      spriteID: 9e496edb9b79d244a9668e48438d3041
       internalID: 76304541
       vertices: []
       indices: 
@@ -204,18 +204,18 @@ TextureImporter:
       name: Recursos_4
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 19
+        y: 5
+        width: 10
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1f6afd9a3818e143b1acc5c947a7416
+      spriteID: 7221abd66c02a9946aab7cc106892f27
       internalID: 736672423
       vertices: []
       indices: 
@@ -225,10 +225,10 @@ TextureImporter:
       name: Recursos_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
+        x: 36
+        y: 18
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,7 +236,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 138634cb641942b468bb2e77c9b8e9fd
+      spriteID: 94c05b1c1826ffa4c85d542dd7019390
       internalID: 673165369
       vertices: []
       indices: 
@@ -246,10 +246,10 @@ TextureImporter:
       name: Recursos_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 2
+        y: 2
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,7 +257,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba8831f284d985e479ddf07bb4096d6c
+      spriteID: 58835b63ee3626946a167cdf6eb4a9b7
       internalID: 981123703
       vertices: []
       indices: 
@@ -267,10 +267,10 @@ TextureImporter:
       name: Recursos_7
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 36
+        y: 2
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,29 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d26e629f2f4a3114d899ef4bcc3ed8bb
+      spriteID: 9622c711895311d47a2f3bd54b3188b2
       internalID: 1047570822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Recursos_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1639f08fc78710344b6592a644cc0c3e
-      internalID: -289903087
       vertices: []
       indices: 
       edges: []
@@ -318,7 +297,6 @@ TextureImporter:
     nameFileIdTable:
       Recursos_1: 1841309027
       Recursos_5: 673165369
-      Recursos_8: -289903087
       Recursos_7: 1047570822
       Recursos_6: 981123703
       Recursos_4: 736672423

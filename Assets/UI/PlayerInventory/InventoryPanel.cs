@@ -5,10 +5,12 @@ using SimpleEventSystem;
 
 public class InventoryPanel : MonoBehaviour
 {
+
     [Header("Inventory Panel")]
     public RectTransform slotGrid;
     public GameObject slotPrefab;
 
+    
     [Header("Info Panel")]
     public InfoPanel panelInfo;
 
@@ -59,6 +61,7 @@ public class InventoryPanel : MonoBehaviour
         panelInfo.ShowItemInfo(item);
     }
 
+ 
     public void HideItemInfo()
     {
         panelInfo.gameObject.SetActive(false);

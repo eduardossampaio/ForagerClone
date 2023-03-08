@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 083b03dcdf019d34d86b7bcd7087b413, type: 3}
-  m_Name: Fruit
+  m_Name: CitricFruit
   m_EditorClassIdentifier: 
   type: 4
   category: 1
   itemName: Frutinha
   image: {fileID: -379823585, guid: ab2f8c46703353243b8273edc8afea36, type: 3}
-  description: Uma pequena fruta de sabor doce
+  description: "Uma pequena fruta de sabor c\xEDtrico"
   shortDescription: recupera 5 de energia
-  lootPrefab: {fileID: 17439695949940244, guid: c403b3fde62e08e429cb82fe747edd53, type: 3}
+  lootPrefab: {fileID: 17439695949940244, guid: 6218a4b0bc90f8b40a05df129bcbfbba, type: 3}
   hitAmount: 3
   lootAmount: 3
   recoveryEnergy: 1
   energyAmount: 5
-  recoveryHealth: 0
-  healthAmount: 0
+  recoveryHealth: 1
+  healthAmount: 1

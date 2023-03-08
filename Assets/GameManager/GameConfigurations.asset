@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mininumDistanceToInteractWithMine: 1.2
   timeToDeleteItemInInventory: 2
+  distanceToSpawnResource: 2
+  timeToSpawnResource: 1
+  gameState: 2

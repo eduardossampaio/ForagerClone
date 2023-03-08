@@ -10,9 +10,20 @@ public class Player : MonoBehaviour
         public static string PLAYER_MOVED = "PlayerEvents.PLAYER_MOVED";
         public static string PLAYER_HIT = "PlayerEvents.PLAYER_HIT";
     }
+
+    public GameConfigurations configurations;
+
+    public int level = 1;
     public float movementSpeed = 1;
     public float currentEnergy = 5;
     public float maxEnergy = 15;
+    public float PositionY
+    {
+        get
+        {
+            return transform.position.y;
+        }
+    }
 
     private Rigidbody2D rigidBody2D;
     private Animator animator;
@@ -42,6 +53,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            CoreGame.instance.ShowInventory(inventory);
+        }
+
+        if (configurations.gameState != GameState.GAMEPLAY)
+        {
+            return;
+        }
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (mousePosition.x < transform.position.x && !lookingLeft)
         {
@@ -67,10 +87,6 @@ public class Player : MonoBehaviour
             animator.SetTrigger("axe");
         }
 
-        if(Input.GetButtonDown("Cancel"))
-        {
-            CoreGame.instance.ShowInventory(inventory);
-        }
 
         movementInput = Vector2.zero;
         if (!isAction)
@@ -89,6 +105,7 @@ public class Player : MonoBehaviour
         }
 
     }
+
 
     private void RegisterNotifications()
     {
@@ -148,13 +165,15 @@ public class Player : MonoBehaviour
     public void UseItem(Item item)
     {
         print("using item");
-        inventory.UseItem(item);
-        switch (item.type)
+        if (item.category == ItemCategory.CONSUMABLE)
         {
-            case ItemType.FOOD:
+            inventory.UseItem(item);
+            if (item.recoveryEnergy)
+            {
                 AddEnergy(item.energyAmount);
-                break;
+            }
         }
+       
     }
 
     public void DeleteItem(Item item)

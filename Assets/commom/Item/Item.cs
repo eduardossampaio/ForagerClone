@@ -17,8 +17,8 @@ public class Item : ScriptableObject
     public Sprite image;
     [TextArea(1,4)]
     public string description;
-    [TextArea(1, 4)]
-    public string shortDescription;
+    //[TextArea(1, 4)]
+    //public string shortDescription;
     public GameObject lootPrefab;
     
     [Header("loot")]
@@ -26,7 +26,12 @@ public class Item : ScriptableObject
     public int lootAmount;
 
     [Header("status")]
+    public bool recoveryEnergy;
     public int energyAmount;
-    //public int manaAmount;
 
+    public bool recoveryHealth;
+    public int healthAmount;
+
+    public bool recoveryMana;
+    public int manaAmount;
 }

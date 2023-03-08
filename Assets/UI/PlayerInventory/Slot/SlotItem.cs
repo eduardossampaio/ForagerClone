@@ -72,12 +72,12 @@ public class SlotItem : MonoBehaviour
 
     public void MouseEnter()
     {
-        CoreGame.instance.inventoryPanel.ShowItemInfo(item);
+        CoreGame.instance.gameplayMenuPanel.ShowItemInfo(item);
     }
 
     public void MouseExit()
     {
-        CoreGame.instance.inventoryPanel.HideItemInfo();
+        CoreGame.instance.gameplayMenuPanel.HideItemInfo();
         isDeletingItem = false;
         ShowDeleteBar(false);
     }

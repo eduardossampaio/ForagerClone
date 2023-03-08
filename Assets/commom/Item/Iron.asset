@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 083b03dcdf019d34d86b7bcd7087b413, type: 3}
-  m_Name: Fruit
+  m_Name: Iron
   m_EditorClassIdentifier: 
-  type: 4
-  category: 1
-  itemName: Frutinha
-  image: {fileID: -379823585, guid: ab2f8c46703353243b8273edc8afea36, type: 3}
-  description: Uma pequena fruta de sabor doce
-  shortDescription: recupera 5 de energia
-  lootPrefab: {fileID: 17439695949940244, guid: c403b3fde62e08e429cb82fe747edd53, type: 3}
+  type: 2
+  category: 0
+  itemName: Ferro
+  image: {fileID: 1516980002, guid: ab2f8c46703353243b8273edc8afea36, type: 3}
+  description: 
+  lootPrefab: {fileID: 17439695949940244, guid: 7aca97e4db8e57045a3a9a8069b7877e, type: 3}
   hitAmount: 3
-  lootAmount: 3
-  recoveryEnergy: 1
-  energyAmount: 5
+  lootAmount: 2
+  recoveryEnergy: 0
+  energyAmount: 0
   recoveryHealth: 0
   healthAmount: 0
+  recoveryMana: 0
+  manaAmount: 0

@@ -17,16 +17,32 @@ public class Mine : MonoBehaviour
     private int hitAmount;
     private NotificationAgent notificationAgent;
     private bool isSelected = false;
+    //private SpriteRenderer spriteRenderer;
+
+    public IslandSlotGrid currentSlot;
+
     private void Start()
     {
         hitAmount = item.hitAmount;
         notificationAgent = GetComponent<NotificationAgent>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
         notificationAgent.RegisterEvent<Player>(Player.PlayerEvents.PLAYER_HIT, OnPlayerHit);
+    }
+
+    public void SetSlot(IslandSlotGrid slotGrid)
+    {
+        this.currentSlot = slotGrid;
+        transform.position = slotGrid.transform.position;
+        GetComponent<SpriteRenderer>().sortingOrder = slotGrid.line;
+
     }
     private void OnMouseOver()
     {
-        notificationAgent.NotifyEvent<Mine>(MineEvents.OnSelected, this);
-        isSelected = true;
+        if (configurations.gameState == GameState.GAMEPLAY)
+        {
+            notificationAgent.NotifyEvent<Mine>(MineEvents.OnSelected, this);
+            isSelected = true;
+        }
     }
 
     private void OnMouseExit()
@@ -43,6 +59,7 @@ public class Mine : MonoBehaviour
             notificationAgent.NotifyEvent(MineEvents.OnDestroyed, this);
             Loot();
             Destroy(gameObject);
+            currentSlot.SetBusy(false);
         }
     }
 
